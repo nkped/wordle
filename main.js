@@ -1,29 +1,48 @@
 import { generateWord } from "./modules/generateWord.js"
 
 
-
-  window.addEventListener('load', () => {
-    console.log('wellcome to Wordle-ish!!')
-
-    console.log(generateWord())
-
-})
+const guessForm = document.querySelector("#gameForm")
+const userGuess = document.querySelector("#userGuess")
 
 
-
-//console.log("resetBtn", resetBtn)
-
-
-
-///GUESS LOGIC
-const guess = document.querySelector("#gameForm")
-console.log("guess:", guess)
-
-
-guess.addEventListener('click', (e) => {
+guessForm.addEventListener('submit', (e) => {
     e.preventDefault()
-    console.log('ya guessed!!')
+    let guess = userGuess.value
+
+    console.log('guess.length is: ', guess.length)
+    
+    if(guess.length !== 6) {
+        alert('Sorry, guess must be 6 characters')
+        return
+    } else {
+        userGuess.value = ''
+    }
+
+    //console.log('ya guessed: ', guess)
 })
+
+
+
+
+
+
+
+//LOADS (INIT) WORDOFTHEDAY
+window.addEventListener('load', () => {
+    console.log('wellcome to Wordle-ish!!')
+    /* let wordOfTheDay = generateWord()
+    console.log(wordOfTheDay) */
+
+    ///GUESS LOGIC
+    //console.log("guess:", guess)
+
+
+})
+
+
+
+
+
 
 
 
@@ -31,8 +50,8 @@ guess.addEventListener('click', (e) => {
 
 /*
 const resetBtn = document.getElementById('resetBtn')
-
 resetBtn.addEventListener('click', () => {
     generateWord(wordList.length)
 })
+//console.log("resetBtn", resetBtn)
 */
