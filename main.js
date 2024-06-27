@@ -4,7 +4,7 @@ import {wordList} from "./wordData.js"
 //console.log("wordList", wordList)
 
 
-
+/* 
 const resetBtn = document.getElementById('resetBtn')
 
 function generateWord(max) {
@@ -14,7 +14,7 @@ function generateWord(max) {
 resetBtn.addEventListener('click', () => {
     generateWord(wordList.length)
 })
-
+ */
 
 //console.log("resetBtn", resetBtn)
 
@@ -24,12 +24,13 @@ resetBtn.addEventListener('click', () => {
 
 
 
-let btn = document.querySelector("#guessSubmit")
-console.log("btn:", btn)
+const guess = document.querySelector("#gameForm")
+console.log("guess:", guess)
 
 
-btn.addEventListener('click', () => {
-    console.log('ya clicked')
+guess.addEventListener('click', (e) => {
+    e.preventDefault()
+    console.log('ya guessed!!')
 })
 
 
