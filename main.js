@@ -1,20 +1,18 @@
 import {wordList} from "./wordData.js"
 
 
-//console.log("wordList", wordList)
-
-
-/* 
-const resetBtn = document.getElementById('resetBtn')
-
+//****GENERATE RANDOM WORD********
 function generateWord(max) {
     return Math.floor(Math.random() * max);
   }
+  
 
-resetBtn.addEventListener('click', () => {
-    generateWord(wordList.length)
+  window.addEventListener('load', () => {
+    console.log('wellcome to Wordle-ish!!')
+    console.log(generateWord(wordList.length))
 })
- */
+
+
 
 //console.log("resetBtn", resetBtn)
 
@@ -23,7 +21,7 @@ resetBtn.addEventListener('click', () => {
 
 
 
-
+///GUESS LOGIC
 const guess = document.querySelector("#gameForm")
 console.log("guess:", guess)
 
@@ -36,6 +34,11 @@ guess.addEventListener('click', (e) => {
 
 
 
-////////GENERATE RANDOM WORD
 
+/*
+const resetBtn = document.getElementById('resetBtn')
 
+resetBtn.addEventListener('click', () => {
+    generateWord(wordList.length)
+})
+*/
