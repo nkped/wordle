@@ -23,7 +23,7 @@ resetBtn.addEventListener('click', () => {
 
 
 
-/* 
+
 let btn = document.querySelector("#guessSubmit")
 console.log("btn:", btn)
 
@@ -31,7 +31,7 @@ console.log("btn:", btn)
 btn.addEventListener('click', () => {
     console.log('ya clicked')
 })
- */
+
 
 
 
