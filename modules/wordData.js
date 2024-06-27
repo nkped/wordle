@@ -1,4 +1,4 @@
-let data = `aback
+const data = `aback
 abase
 abate
 abbey
@@ -2309,7 +2309,7 @@ zesty
 zonal`
 
 
-let newData = data.replaceAll(/(\r\n|\n|\r)/gm, ",")
+const newData = data.replaceAll(/(\r\n|\n|\r)/gm, ",")
 
 export let wordList = newData.split(",")
 

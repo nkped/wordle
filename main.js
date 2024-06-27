@@ -1,18 +1,6 @@
-import {wordList} from "./wordData.js"
+import { generateWord } from "./modules/generateWord.js"
 
 
-//****GENERATE RANDOM WORD********
-function random(max) {
-    return Math.floor(Math.random() * max);
-  }
-  
-function generateWord() {
-    let randomNum = random(wordList.length)
-
-    let wordleWord = wordList[randomNum]
-
-    return wordleWord
-}
 
   window.addEventListener('load', () => {
     console.log('wellcome to Wordle-ish!!')
@@ -24,9 +12,6 @@ function generateWord() {
 
 
 //console.log("resetBtn", resetBtn)
-
-
-
 
 
 
