@@ -1,25 +1,19 @@
-const increment = (() => {
-
-    let counter = 0
-    console.log('counter from IIFE', counter)
-    const triesLeft = (num) => console.log(`You have ${6 - num} tries left`)
-    return () => { counter++; triesLeft(counter)}
-
-})()
+import { calculateGuesses } from "./calculateGuesses.js"
 
 //CHECK NUMBER OF GUESSES     
 export function guessResult(guessString, wordString) {
-    console.log("guessString, wordString from iife: ", guessString, wordString)
+    //console.log("guessString, wordString from guessResult: ", guessString, wordString)
 
-    let count = increment()
 
-    if (count = 6) {
-        console.log('last try, make it count!')
+
+    if (calculateGuesses()) {
+
+        console.log('its true')
     }
-    else if (count >= 6) {
-        console.log('sorry, you have used all your guesses')
-        return
-    } else if(guessString.length !== 5) {
+
+
+    
+   if (guessString.length !== 5) {
             alert('Sorry, guess must be 5 characters')
             return
     } else if (guessString == wordString) {
@@ -27,7 +21,6 @@ export function guessResult(guessString, wordString) {
         console.log('correct guess!!')
         return        
     } else {
-        count++  
         let guessArr = guessString.split('')
         let wordArr = wordString.split('')
         let results = []
@@ -49,5 +42,5 @@ export function guessResult(guessString, wordString) {
         console.log('wordString: ', wordString)
         console.log('guessString: ', guessString)
         console.log('result: ' ,results)
-        console.log('you have guessed', count)
+        //console.log('you have guessed', count)
     }}
