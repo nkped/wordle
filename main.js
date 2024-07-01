@@ -7,16 +7,19 @@ const userGuess = document.querySelector("#userGuess")
 
 //LOADS (INIT) WORDOFTHEDAY
 window.addEventListener('load', () => {
-    
+   //GET THE WORD 
     let wordString = generateWord()
     console.log(wordString)
 
-    ///GUESS LOGIC
+    ///GET THE GUESS
     guessForm.addEventListener('submit', (e) => {
         e.preventDefault()
         let guessString = userGuess.value
-        //GUESSRESULT
-        guessResult(guessString, wordString)       
+
+       
+        //GET THE GUESS RESULT
+        guessResult(guessString, wordString)
+        
     })
 })
 
