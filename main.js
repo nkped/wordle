@@ -5,25 +5,20 @@ const guessForm = document.querySelector("#gameForm")
 const userGuess = document.querySelector("#userGuess")
 
 
-//LOADS (INIT) WORDOFTHEDAY
+//LOAD WORD OF THE DAY
 window.addEventListener('load', () => {
    //GET THE WORD 
-    let wordString = generateWord()
-    console.log(wordString)
-
+    let wordStr = generateWord()
+    console.log('Word of the Day:', wordStr)
+    
     ///GET THE GUESS
     guessForm.addEventListener('submit', (e) => {
       e.preventDefault()
-      let guessString = userGuess.value
+      let guessStr = userGuess.value      
+      console.log('Your Guess:', guessStr)
       
-      
-      //GET THE GUESS RESULT
-      guessResult(guessString, wordString)
-      
-          
-
-      
-        
+      //GET THE GUESS RESPONSE
+      guessResult(guessStr, wordStr)
     })
 })
 
