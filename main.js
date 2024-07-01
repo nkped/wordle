@@ -13,12 +13,16 @@ window.addEventListener('load', () => {
 
     ///GET THE GUESS
     guessForm.addEventListener('submit', (e) => {
-        e.preventDefault()
-        let guessString = userGuess.value
+      e.preventDefault()
+      let guessString = userGuess.value
+      
+      
+      //GET THE GUESS RESULT
+      guessResult(guessString, wordString)
+      
+          
 
-       
-        //GET THE GUESS RESULT
-        guessResult(guessString, wordString)
+      
         
     })
 })
