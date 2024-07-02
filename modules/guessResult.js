@@ -1,5 +1,6 @@
 import { validateGuess } from "./validateGuess.js"
 import { filterGuess } from "./filterGuess.js"
+import { transformResults } from "./transformResults.js"
 
 //CLOSURE FUNCTION
 
@@ -20,7 +21,14 @@ const outerFunction = () => {
             let results = []
             //console.log('guessArr, wordArr', guessArr, wordArr)
 
-            filterGuess(guessArr, wordArr, results)
+            //should return result to transform into propper respons
+            const filterResults = filterGuess(guessArr, wordArr, results)
+
+            console.log('filterResults: ',filterResults)
+
+            transformResults(filterResults)
+
+
         }   
     }
     return innerFunction

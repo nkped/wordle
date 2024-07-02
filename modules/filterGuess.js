@@ -14,6 +14,5 @@ export function filterGuess(guessArr, wordArr, results) {
         guessArr[i] = null
         results.push(-1)
         }
-    }
-    console.log('results: ' ,results)
+    }   return results
 }
