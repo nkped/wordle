@@ -8,7 +8,7 @@ Generates a random integer and returns corresponding word from
 
 function random(max) {
     return Math.floor(Math.random() * max);
-  }
+}
 
   
 export function generateWord() {

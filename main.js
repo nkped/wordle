@@ -11,30 +11,12 @@ window.addEventListener('load', () => {
     let wordStr = generateWord()
     console.log('Word of the Day:', wordStr)
     
-    ///GET THE GUESS
+    ///SUBMIT GUESS AND GET RESPONSE
     guessForm.addEventListener('submit', (e) => {
       e.preventDefault()
       let guessStr = userGuess.value      
       console.log('Your Guess:', guessStr)
       
-      //GET THE GUESS RESPONSE
       guessResult(guessStr, wordStr)
     })
 })
-
-
-
-
-
-
-
-
-
-
-/*
-const resetBtn = document.getElementById('resetBtn')
-resetBtn.addEventListener('click', () => {
-    generateWord(wordList.length)
-})
-//console.log("resetBtn", resetBtn)
-*/
