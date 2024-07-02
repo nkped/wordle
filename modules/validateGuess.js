@@ -16,6 +16,7 @@ export function validateGuess(guess, word, count) {
     } else if (guess == word) {
         userGuess.value = ''
         console.log('correct guess!!')
+        //clear user guess
         return false        
     }   
 

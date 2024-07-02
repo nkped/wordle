@@ -24,9 +24,9 @@ const outerFunction = () => {
             //should return result to transform into propper respons
             const filterResults = filterGuess(guessArr, wordArr, results)
 
-            console.log('filterResults: ',filterResults)
+            //console.log('filterResults: ',filterResults)
 
-            transformResults(filterResults)
+            transformResults(filterResults, guess.split(''))
 
 
         }   
