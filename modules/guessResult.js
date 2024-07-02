@@ -12,6 +12,8 @@ const outerFunction = () => {
 
         const valideGuess = validateGuess(guess, word, count)
 
+        console.log(valideGuess)
+
           if (valideGuess) {
             let guessArr = guess.split('')
             let wordArr = word.split('')
