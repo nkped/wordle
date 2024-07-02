@@ -1,8 +1,8 @@
-import { createTiles } from "./createTiles.js"
+//import { createTiles } from "./createTiles.js"
 
 
-export function transformResults(results, guess) {
-
+export function transformResults(results, guess) {    
+    
     //console.log(`recieved in transformedResults: results: ${results} guess: ${guess}`)
 
 

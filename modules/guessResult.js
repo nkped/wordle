@@ -6,11 +6,11 @@ import { transformResults } from "./transformResults.js"
 
 const outerFunction = () => {
     let count = 0
-
+//NB*inner function accepts params
     const innerFunction = (guess, word) => {
         count++
-        //console.log('guess, word', guess, word)
         console.log(`You have ${6 - count} turns left!`)
+        //console.log('guess, word', guess, word)
 
         const valideGuess = validateGuess(guess, word, count)
         //console.log(valideGuess)
@@ -19,15 +19,12 @@ const outerFunction = () => {
             let guessArr = guess.split('')
             let wordArr = word.split('')
             //console.log('guessArr, wordArr', guessArr, wordArr)
-
-            //should return result to transform into propper respons
+            
+            /*Below returns array of users input to transformResult() before final response in DOM*/
             const filterResults = filterGuess(guessArr, wordArr)
-
             //console.log('filterResults: ',filterResults)
 
             transformResults(filterResults, guess.split(''))
-
-
         }   
     }
     return innerFunction
