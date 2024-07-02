@@ -2,8 +2,7 @@
 
 
 export function validateGuess(guess, word, count) {
-
-    console.log(guess, word, count)
+    //console.log(guess, word, count)
 
     if (count == 7) {
         console.log('Sorry, you are out of guesses!')
