@@ -18,11 +18,10 @@ const outerFunction = () => {
           if (valideGuess) {
             let guessArr = guess.split('')
             let wordArr = word.split('')
-            let results = []
             //console.log('guessArr, wordArr', guessArr, wordArr)
 
             //should return result to transform into propper respons
-            const filterResults = filterGuess(guessArr, wordArr, results)
+            const filterResults = filterGuess(guessArr, wordArr)
 
             //console.log('filterResults: ',filterResults)
 
