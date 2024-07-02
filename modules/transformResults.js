@@ -1,14 +1,14 @@
-
+import { createTiles } from "./createTiles.js"
 
 
 export function transformResults(results, guess) {
 
-    console.log('transformed results: ', results, guess)
+    //console.log(`recieved in transformedResults: results: ${results} guess: ${guess}`)
 
 
     const response = []
 
-    for (let i = 0; i < results.length + 1; i++) {
+    for (let i = 0; i < results.length; i++) {
 
         if (results[i] == -1) {
            response.push(`The letter - ${guess[i]} - is not included in Word of the Day.`)
@@ -16,10 +16,12 @@ export function transformResults(results, guess) {
         if (results[i] == 1) {
             response.push(`The Letter ${guess[i]} is included, but in incorrect position.`)}
         if (results[i] == 2) {
-            response.push(`The Letter ${guess[i]} is included and in correct position (no).`)
+            response.push(`The Letter ${guess[i]} is included and in correct position.`)
         }
             console.log(response[i])
         }
+
+        //call createTiles with transformed results
 
 
 }
