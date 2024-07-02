@@ -21,7 +21,7 @@ export function transformResults(results, guess) {
             console.log(response[i])
         }
 
-        //call createTiles with transformed results
+        //Currently, results are transformed into response in temp literal, and logged. Response should be suitably to call createTiles(). 
 
 
 }
