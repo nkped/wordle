@@ -1,6 +1,6 @@
-import { generateWord } from "./generateWord.js"
+import { validateGuess } from "./validateGuess.js"
 
-//CLOSURE FUNCTION    
+//CLOSURE FUNCTION
 
 const outerFunction = () => {
     let count = 0
@@ -8,23 +8,11 @@ const outerFunction = () => {
     const innerFunction = (guess, word) => {
         count++
         //console.log('guess, word', guess, word)
-
         console.log(`You have ${6 - count} turns left!`)
 
-        if (count == 7) {
-            console.log('Sorry, you are out of guesses!')
-            userGuess.value = ''
-            return
-        } else if (count > 7) {
-            location.reload();
-        } else if (guess.length !== 5) {
-            alert('Sorry, guess must be 5 characters')
-            return //should not count as turn
-        } else if (guess == word) {
-            userGuess.value = ''
-            console.log('correct guess!!')
-            return        
-        }   else {
+        const valideGuess = validateGuess(guess, word, count)
+
+          if (valideGuess) {
             let guessArr = guess.split('')
             let wordArr = word.split('')
             let results = []
