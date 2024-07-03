@@ -2,10 +2,8 @@
 
 
 export function transformResults(results, guess) {    
-    
     //console.log(`recieved in transformedResults: results: ${results} guess: ${guess}`)
-
-
+    
     const response = []
 
     for (let i = 0; i < results.length; i++) {
@@ -21,7 +19,5 @@ export function transformResults(results, guess) {
             console.log(response[i])
         }
 
-        //Currently, results are transformed into response in temp literal, and logged. Response should be suitably to call createTiles(). 
-
-
+        //Currently, results are transformed into response in temp literal, and logged. Next, make response suitably to call createTiles().
 }

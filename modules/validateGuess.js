@@ -10,9 +10,6 @@ export function validateGuess(guess, word, count) {
         return false
     } else if (count > 7) {
         location.reload();
-    } else if (guess.length !== 5) {
-        alert('Sorry, guess must be 5 characters')
-        return //should not count as turn
     } else if (guess == word) {
         userGuess.value = ''
         console.log('correct guess!!')

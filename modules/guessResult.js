@@ -6,7 +6,7 @@ import { transformResults } from "./transformResults.js"
 
 const outerFunction = () => {
     let count = 0
-//NB*inner function accepts params
+//NB inner function accepts params
     const innerFunction = (guess, word) => {
         count++
         console.log(`You have ${6 - count} turns left!`)

@@ -1,5 +1,6 @@
 import { generateWord } from "./modules/generateWord.js"
-import { guessResult } from "./modules/guessResult.js"
+import { preClosureValidation } from "./modules/preClosureValidation.js"
+
 
 const guessForm = document.querySelector("#gameForm")
 const userGuess = document.querySelector("#userGuess")
@@ -16,7 +17,7 @@ window.addEventListener('load', () => {
       e.preventDefault()
       let guessStr = userGuess.value      
       console.log('Your Guess:', guessStr)
-      
-      guessResult(guessStr, wordStr)
+
+      preClosureValidation(guessStr, wordStr)
     })
 })
